@@ -152,7 +152,6 @@ header .user__menu li a:hover {
   -webkit-text-stroke-width: 4px;
   transform: translateX(-200px);
   transition: transform 0.5s ease 0s;
-  z-index: 2;
 }
 
 .hero .slide .slide__txt .slide__description,
@@ -192,11 +191,13 @@ header .user__menu li a:hover {
   max-height: 550px;
   padding-right: 60px;
   padding-top: 80px;
+  z-index: 1;
 }
 
 .hero .slide .slide__img img {
   width: 100%;
   transform: rotate(-70deg);
+  transform-origin: bottom;
   opacity: 0;
   transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.6s ease 0s;
 }
@@ -217,6 +218,55 @@ header .user__menu li a:hover {
 
 .hero .slide.active .slide__img img {
   transform: rotate(0);
-  opacity: 0.7;
+  opacity: 1;
+}
+
+.hero .hero-txt {
+  position: absolute;
+  text-transform: uppercase;
+  font-family: BerlinSansFBDemiBold;
+  font-size: 5rem;
+  top: 320px;
+  right: -190px;
+  z-index: 2;
+  color: #3a3a3a;
+  transform: rotate(-90deg);
+}
+
+.hero .slide__control {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 98;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero .slide__control li {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease 0s;
+}
+
+.hero .slide__control li ~ li {
+  margin-left: 30px;
+}
+
+.hero .slide__control li span {
+  width: 25px;
+  height: 4px;
+  background-color: #bbbbbb;
+}
+
+.hero .slide__control li:hover {
+  color: #ffffff;
+}
+
+.hero .slide__control li.active {
+  transform: scale(1.5);
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
