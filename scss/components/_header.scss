@@ -12,11 +12,6 @@ header{
     z-index: 99;
     transition: height 0.3s ease 0s;
 
-    .shrink{
-        height: 60px;
-        background-color: $second-color;
-    }
-
     .main__menu__wrapper{
         position: absolute;
         inset: 0;
@@ -78,5 +73,15 @@ header{
         }
     }
 
+    .main__menu ul,
+    .user__menu ul{
+        margin-bottom: 0 !important;
+    }
+
+}
+
+.header__scroll{
+    height: 70px;
+    background-color: $second-color;
 }
 

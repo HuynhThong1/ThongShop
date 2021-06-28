@@ -30,6 +30,7 @@ a {
 
 ul {
   list-style: none;
+  margin-bottom: 0;
 }
 
 img {
@@ -53,11 +54,6 @@ header {
   padding: 0 93px;
   z-index: 99;
   transition: height 0.3s ease 0s;
-}
-
-header .shrink {
-  height: 60px;
-  background-color: #3a3a3a;
 }
 
 header .main__menu__wrapper {
@@ -115,6 +111,16 @@ header .user__menu li a i {
 header .user__menu li a:hover {
   color: #ffffff;
   opacity: 1;
+}
+
+header .main__menu ul,
+header .user__menu ul {
+  margin-bottom: 0 !important;
+}
+
+.header__scroll {
+  height: 70px;
+  background-color: #3a3a3a;
 }
 
 .hero {

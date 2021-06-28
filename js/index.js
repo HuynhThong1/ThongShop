@@ -11,6 +11,8 @@ let hero_slide_control_items = hero_slide.querySelectorAll('.slide__control__ite
 let slide_prev = hero_slide.querySelector('.slide__prev');
 let slide_next = hero_slide.querySelector('.slide__next');
 
+let header = document.querySelector('header');
+
 showSlide = (index) => {
     hero_slide.querySelector('.slide.active').classList.remove('active');
     hero_slide.querySelector('.slide__control__item.active').classList.remove('active');
@@ -29,6 +31,15 @@ prevSlide = () => {
 }
 
 setTimeout(() => hero_slide_items[0].classList.add('active'), 200);
+
+
+window.addEventListener('scroll', () => {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        header.classList.add('header__scroll')
+    } else {
+        header.classList.remove('header__scroll')
+    }
+})
 
 // auto slide
 // setInterval(() => {
