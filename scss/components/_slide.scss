@@ -1,27 +1,26 @@
-.hero{
+.hero {
     height: 100vh;
     padding-top: $header-height;
     position: relative;
 
-
-    .slide__container{
+    .slide__container {
         height: 100%;
         position: relative;
     }
 
-    .slide{
+    .slide {
         display: flex;
         height: 0;
         overflow: hidden;
 
-        .slide__txt{
+        .slide__txt {
             width: 50%;
             padding-left: 60px;
 
-            .slide__title{
+            .slide__title {
                 width: max-content;
 
-                h3{
+                h3 {
                     font-size: 11rem;
                     font-family: BerlinSansFBDemiBold;
                     color: $txt-white;
@@ -33,85 +32,87 @@
                 }
             }
 
-            .slide__description, 
-            .slide__btn{
+            .slide__description,
+            .slide__btn {
                 margin-top: 84px;
             }
 
-            .slide__description{
-                p{
+            .slide__description {
+                p {
                     font-size: 1rem;
                     transition-delay: 0.3s;
                 }
             }
 
-            .slide__btn{
-                .hero__btn{
+            .slide__btn {
+                .hero__btn {
                     font-size: 1.2rem;
                     font-weight: 700;
                     text-transform: uppercase;
                     padding: 7px 30px;
                     background-color: $txt-white;
                     color: $main-color;
-                    transition: transform .3s ease 0s;
+                    transition: transform 0.3s ease 0s;
 
-                    &:hover{
+                    &:hover {
                         transform: translateY(-10px);
                     }
                 }
             }
 
             .slide__description > p,
-            .slide__btn{
+            .slide__btn {
                 transform: translateY(100px);
                 opacity: 0;
-                transition: transform .5s ease 0s, opacity 0.5s ease 0s;
+                transition: transform 0.5s ease 0s, opacity 0.5s ease 0s;
                 transition-delay: 0.6s;
             }
-
         }
 
-        .slide__img{
+        .slide__img {
             width: 50%;
             max-height: 550px;
             padding-right: 60px;
             padding-top: 80px;
             z-index: 1;
 
-            img{
+            img {
                 width: 100%;
-                transform: rotate(-70deg);
+                //transform: rotate(-70deg);
+                transform: translateX(200%);
                 transform-origin: bottom;
                 opacity: 0;
-                transition: transform 1s cubic-bezier(.175, .885, 0.32, 1.275), opacity 0.6s ease 0s;
+                transition: transform 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.6s ease 0s;
             }
         }
     }
 
-    .slide.active{
+    .slide.active {
         height: 100%;
 
-        .slide__title{
-            h3{
+        .slide__title {
+            h3 {
                 transform: translateX(0);
+                z-index: 1000;
             }
         }
 
         .slide__description > p,
-        .slide__btn{ 
-            transform: translateY(0) ;
+        .slide__btn {
+            transform: translateY(0);
             opacity: 1;
         }
 
-        .slide__img{
-            img{
-                transform: rotate(0);
+        .slide__img {
+            img {
+                //transform: rotate(0);
+                transform: translateX(0);
                 opacity: 1;
             }
         }
     }
 
-    .hero-txt{
+    .hero-txt {
         position: absolute;
         text-transform: uppercase;
         font-family: BerlinSansFBDemiBold;
@@ -123,8 +124,7 @@
         transform: rotate(-90deg);
     }
 
-
-    .slide__control{
+    .slide__control {
         display: flex;
         align-items: center;
         position: absolute;
@@ -133,8 +133,8 @@
         left: 50%;
         transform: translateX(-50%);
 
-        li{
-            ~li{
+        li {
+            ~ li {
                 margin-left: 30px;
             }
             font-size: 1.2rem;
@@ -143,22 +143,31 @@
             cursor: pointer;
             transition: transform 0.3s ease 0s;
 
-            span{
+            span {
                 width: 25px;
                 height: 4px;
                 background-color: $txt-color;
             }
 
-            &:hover{
+            &:hover {
                 color: $txt-white;
             }
         }
 
-        li.active{
+        li.active {
             transform: scale(1.5);
+            margin-bottom: 0.5rem;
             color: $txt-white;
         }
     }
-
 }
 
+// overflow: hidden;
+// text-overflow: ellipsis;
+// -webkit-line-clamp: 3;
+// -webkit-box-orient: vertical;
+
+@media screen and (max-width: 990px) {
+
+    
+}

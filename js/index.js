@@ -11,7 +11,7 @@ let hero_slide_control_items = hero_slide.querySelectorAll('.slide__control__ite
 let slide_prev = hero_slide.querySelector('.slide__prev');
 let slide_next = hero_slide.querySelector('.slide__next');
 
-let header = document.querySelector('header');
+let nav = document.querySelector('.nav__header');
 
 showSlide = (index) => {
     hero_slide.querySelector('.slide.active').classList.remove('active');
@@ -33,15 +33,16 @@ prevSlide = () => {
 setTimeout(() => hero_slide_items[0].classList.add('active'), 200);
 
 
+//nav scroll
 window.addEventListener('scroll', () => {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        header.classList.add('header__scroll')
+        nav.classList.add('header__scroll');
     } else {
-        header.classList.remove('header__scroll')
+        nav.classList.remove('header__scroll');
     }
 })
 
-// auto slide
+//auto slide
 // setInterval(() => {
 //     if(!hero_slide_play) return 
 //     nextSlide()
@@ -61,6 +62,16 @@ hero_slide_control_items.forEach((item, index) => {
 hero_slide.addEventListener('mouseover', () => hero_slide_play = false);
 
 hero_slide.addEventListener('mouseleave', () => hero_slide_play = true);
+
+
+document.querySelector('.search').onclick = () => {
+    document.querySelector('.search__input').style.display ='block';
+    document.querySelector('.user__menu').classList.add('search__after');
+}
+document.querySelector('.search__input').onmouseleave = () => {
+    document.querySelector('.search__input').style.display ='none';
+    document.querySelector('.user__menu').classList.remove('search__after');
+}
 
 
 

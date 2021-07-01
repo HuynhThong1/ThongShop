@@ -20,28 +20,78 @@
     <!-- style -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
 
+<body>
     <!-- header -->
     <header>
-        <a href="#" class="logo">
-            <img src="/img/logo.png" alt="" class="img-responsive">
-        </a>
+        <nav class="nav__header">
 
-        <div class="main__menu__wrapper">
-            <ul class="main__menu">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Dealer</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <ul class="user__menu">
-            <li><a href="#"><i class='bx bx-shopping-bag'></i></a></li>
-            <li><a href="#"><i class='bx bx-user'></i></a></li>
-            <li><a href="#"><i class='bx bx-search'></i></a></li>
-        </ul>
+            <a href="#" class="logo__mobile">
+                <img src="/img/logo.png" alt="" class="img-responsive">
+            </a>
+
+            <label for="nav-mobile-input" class="collapse__btn">
+                <i class='bx bx-menu'></i>
+            </label>
+
+            <input type="checkbox" name="" class="d-none nav__input" id="nav-mobile-input">
+
+            <label for="nav-mobile-input" class="nav__overlay"></label>
+
+            <!-- navbar mobile -->
+            <div class="navbar__collapse__mobile">
+                
+                <label for="nav-mobile-input" class="navbar__mobile__close">
+                    <i class='bx bx-x'></i>
+                </label>
+                <ul class="navbar__collapse__list">
+                    <li class="mb-3"><a href="#" class="login__mobile">
+                        <img class="img__login__mobile" src="./img/avatar.png" />
+                        <p class="text__login__mobile">Login dùm cái!!!</p>
+                    </a></li>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Dealer</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li class="search__mobile"><a >Search</a>
+                        <form class="search__mobile__input">
+                            <input type="text" class="form-control" placeholder="What are you looking for...">
+                            <i class="bx bx-search"></i>
+                        </form>
+                    </li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+
+                
+            </div>
+
+            <!-- navbar desktop -->
+            <div class="navbar__collapse">
+                <a href="./index.html">
+                    <img src="/img/logo.png" alt="" height="60px" class="img-responsive">
+                </a>
+
+                <div class="main__menu__wrapper">
+                    <ul class="main__menu">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Dealer</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <ul class="user__menu">
+                    <li><a href="#"><i class='bx bx-shopping-bag'></i></a></li>
+                    <li><a href="#"><i class='bx bx-user'></i></a></li>
+                    <li><a class="search"><i class='bx bx-search'></i></a></li>
+
+                    <form class="search__input">
+                        <input class="form-control" type="text" placeholder="What are you looking for...">
+                    </form>
+                </ul>
+            </div>
+        </nav>
     </header>
     <!-- end header -->
 
@@ -52,10 +102,99 @@
             <div class="slide">
                 <div class="slide__txt">
                     <div class="slide__title">
+                        <h3>Suit1</h3>
+                    </div>
+                    <div class="slide__description">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, temporibus nostrum quia
+                            modi accusantium saepe deserunt suscipit fugit quae laboriosam quo dicta quibusdam
+                            doloremque vitae magnam, autem, hic impedit dignissimos?</p>
+                    </div>
+                    <div class="slide__btn">
+                        <a href="#" class="hero__btn">Buy Now</a>
+                    </div>
+                </div>
+                <div class="slide__img">
+                    <img class="" src="./img/pic1.png" alt="">
+                </div>
+            </div>
+            <!-- end slide item 2 -->
+
+            <!-- slide item 2-->
+            <div class="slide">
+                <div class="slide__txt">
+                    <div class="slide__title">
+                        <h3>Suit 2</h3>
+                    </div>
+                    <div class="slide__description">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, temporibus nostrum quia
+                            modi accusantium saepe deserunt suscipit fugit quae laboriosam quo dicta quibusdam
+                            doloremque vitae magnam, autem, hic impedit dignissimos?</p>
+                    </div>
+                    <div class="slide__btn">
+                        <a href="#" class="hero__btn">Buy Now</a>
+                    </div>
+                </div>
+                <div class="slide__img">
+                    <img src="./img/pic2.png" alt="">
+                </div>
+            </div>
+            <!-- end slide item 2-->
+
+            <!-- slide item 3-->
+            <div class="slide">
+                <div class="slide__txt">
+                    <div class="slide__title">
+                        <h3>Suit 3</h3>
+                    </div>
+                    <div class="slide__description">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, temporibus nostrum quia
+                            modi accusantium saepe deserunt suscipit fugit quae laboriosam quo dicta quibusdam
+                            doloremque vitae magnam, autem, hic impedit dignissimos?</p>
+                    </div>
+                    <div class="slide__btn">
+                        <a href="#" class="hero__btn">Buy Now</a>
+                    </div>
+                </div>
+                <div class="slide__img">
+                    <img src="./img/pic3.png" alt="">
+                </div>
+            </div>
+            <!-- end slide item 3-->
+
+            <div class="hero-txt">
+                your luxury
+            </div>
+
+            <!-- slice control -->
+            <ul class="slide__control">
+                <li class="slide__prev">
+                    <!-- <i class="bx bx-chevron-left"></i> -->
+                </li>
+                <li class="slide__control__item active"><span class="dot"></span></li>
+                <li class="slide__control__item"><span class="dot"></span></li>
+                <li class="slide__control__item"><span class="dot"></span></li>
+                <li class="slide__next">
+                    <!-- <i class="bx bx-chevron-right"></i> -->
+                </li>
+            </ul>
+            <!-- end slice control -->
+        </div>
+    </div>
+    <!-- end hero slide -->
+
+
+    <div class="hero">
+        <div class="silde__container" id="hero-slide">
+            <!-- slide item 1-->
+            <div class="slide">
+                <div class="slide__txt">
+                    <div class="slide__title">
                         <h3>Thongdepzai suit</h3>
                     </div>
                     <div class="slide__description">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, temporibus nostrum quia modi accusantium saepe deserunt suscipit fugit quae laboriosam quo dicta quibusdam doloremque vitae magnam, autem, hic impedit dignissimos?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, temporibus nostrum quia
+                            modi accusantium saepe deserunt suscipit fugit quae laboriosam quo dicta quibusdam
+                            doloremque vitae magnam, autem, hic impedit dignissimos?</p>
                     </div>
                     <div class="slide__btn">
                         <a href="#" class="hero__btn">Buy Now</a>
@@ -74,7 +213,9 @@
                         <h3>Cantaloupe suit</h3>
                     </div>
                     <div class="slide__description">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, temporibus nostrum quia modi accusantium saepe deserunt suscipit fugit quae laboriosam quo dicta quibusdam doloremque vitae magnam, autem, hic impedit dignissimos?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, temporibus nostrum quia
+                            modi accusantium saepe deserunt suscipit fugit quae laboriosam quo dicta quibusdam
+                            doloremque vitae magnam, autem, hic impedit dignissimos?</p>
                     </div>
                     <div class="slide__btn">
                         <a href="#" class="hero__btn">Buy Now</a>
@@ -93,7 +234,9 @@
                         <h3>Marcus suit</h3>
                     </div>
                     <div class="slide__description">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, temporibus nostrum quia modi accusantium saepe deserunt suscipit fugit quae laboriosam quo dicta quibusdam doloremque vitae magnam, autem, hic impedit dignissimos?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, temporibus nostrum quia
+                            modi accusantium saepe deserunt suscipit fugit quae laboriosam quo dicta quibusdam
+                            doloremque vitae magnam, autem, hic impedit dignissimos?</p>
                     </div>
                     <div class="slide__btn">
                         <a href="#" class="hero__btn">Buy Now</a>
@@ -111,16 +254,19 @@
 
             <!-- slice control -->
             <ul class="slide__control">
-                <li class="slide__prev"><!-- <i class="bx bx-chevron-left"></i> --></li>
+                <li class="slide__prev">
+                    <!-- <i class="bx bx-chevron-left"></i> -->
+                </li>
                 <li class="slide__control__item active"><span class="dot"></span></li>
                 <li class="slide__control__item"><span class="dot"></span></li>
                 <li class="slide__control__item"><span class="dot"></span></li>
-                <li class="slide__next"><!-- <i class="bx bx-chevron-right"></i> --></li>
+                <li class="slide__next">
+                    <!-- <i class="bx bx-chevron-right"></i> -->
+                </li>
             </ul>
             <!-- end slice control -->
         </div>
     </div>
-    <!-- end hero slide -->
 
 
 
